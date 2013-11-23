@@ -1,14 +1,14 @@
 class SolutionsController < ApplicationController
   def index
-    @solutions = Solutions.all
+    @solutions = Solution.all
   end
 
   def show
-    @solution = Solutions.find(params[:id])
+    @solution = Solution.find(params[:id])
   end
 
   def new
-    @solution = Solutions.new
+    @solution = Solution.new
   end
 
   def edit
@@ -18,7 +18,7 @@ class SolutionsController < ApplicationController
   end
 
   def create
-    @solution = Solutions.new(solution_params)
+    @solution = Solution.new(solution_params)
 
     respond_to do |format|
       if @solution.save
