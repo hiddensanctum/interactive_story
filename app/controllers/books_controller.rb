@@ -5,9 +5,6 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
-    1.times do
-      page = @book.pages.build
-    end
   end
 
   def show
@@ -19,6 +16,7 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
+    binding.pry
     if @book.save
       redirect_to @book
     end
@@ -32,6 +30,6 @@ class BooksController < ApplicationController
 
   private
     def book_params
-      params.require(:book).permit(:name, :author, :level, :num_page, :description, questions_attributes: [:id, :image, :story, :book_id, '_destroy'])
+      params.require(:book).permit(:name, :author, :level, :num_page, :description)
     end
 end
