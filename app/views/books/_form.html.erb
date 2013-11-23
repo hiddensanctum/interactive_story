@@ -32,6 +32,11 @@
     <%= f.text_field :num_page %>
   </div>
 
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+
   <%= f.fields_for :pages do |builder| %>
     <%= render 'page_fields', f: builder %>
   <% end %>
