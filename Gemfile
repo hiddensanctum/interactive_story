@@ -31,6 +31,8 @@ gem 'figaro'
 
 gem 'pry'
 
+gem 'will_paginate'
+
 gem 'carrierwave'
 
 gem 'rmagick'
