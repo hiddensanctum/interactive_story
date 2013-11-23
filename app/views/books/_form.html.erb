@@ -13,24 +13,29 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.name :name %>
+    <%= f.text_field :name %>
   </div>
   <div class="field">
     <%= f.label :author %><br>
-    <%= f.name :author %>
+    <%= f.text_field :author %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.name :description %>
+    <%= f.text_field :description %>
   </div>
   <div class="field">
     <%= f.label :level %><br>
-    <%= f.name :level %>
+    <%= f.text_field :level %>
   </div>
   <div class="field">
     <%= f.label :num_page %><br>
-    <%= f.name :num_page %>
+    <%= f.text_field :num_page %>
   </div>
+
+  <%= f.fields_for :pages do |builder| %>
+    <%= render 'page_fields', f: builder %>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
