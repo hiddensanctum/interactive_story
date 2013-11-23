@@ -1,5 +1,6 @@
-<%= binding.pry %>
 <% @pages.each do |page| %>
-<%= binding.pry %>
-  <%= page.story %>
+  <h1>Title</h1>
 <% end %>
+
+<%= link_to 'New Page', new_book_page_path(@book) %>
+

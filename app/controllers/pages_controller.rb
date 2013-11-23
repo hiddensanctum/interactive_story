@@ -18,7 +18,7 @@ class PagesController < ApplicationController
   end
 
   def create
-    @page = @list.steps.new(page_params)
+    @page = @book.pages.new(page_params)
 
     if @page.save
       redirect_to [@book, @page]
