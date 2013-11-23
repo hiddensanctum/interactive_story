@@ -1,6 +1,7 @@
 <h1>Books</h1>
-<% @books.each do |book| %>
-  <%= book.name %><br>
-<% end %>
+
+<div id="books">
+<%= render @books %>
+</div>
 
 <%= link_to 'New Book', new_book_path %>
