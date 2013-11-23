@@ -1,4 +1,10 @@
 InteractiveStory::Application.routes.draw do
+
+  resources :books do
+    resources :pages
+  end
+
+  root to: 'books#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -39,7 +45,7 @@ InteractiveStory::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
