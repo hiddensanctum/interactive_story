@@ -32,10 +32,6 @@
     <%= f.text_field :num_page %>
   </div>
 
-  <%= f.fields_for :pages do |builder| %>
-    <%= render 'page_fields', f: builder %>
-  <% end %>
-
   <div class="actions">
     <%= f.submit %>
   </div>

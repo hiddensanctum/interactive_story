@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   before_filter :load_book
 
   def index
-    @pages = @book.pages.all
+    @pages = @book.pages.paginate(:page => params[:page])
   end
 
   def show
