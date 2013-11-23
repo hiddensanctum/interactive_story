@@ -1,6 +1,9 @@
 <% @pages.each do |page| %>
-  <h1>Title</h1>
+  <%= page.story%>
+  <%= image_tag page.image_url(:thumb).to_s %><br>
 <% end %>
+
+<%= will_paginate @pages %>
 
 <%= link_to 'New Page', new_book_page_path(@book) %>
 
