@@ -1,5 +1,11 @@
 InteractiveStory::Application.routes.draw do
 
+  resources :answers
+
+  resources :solutions
+
+  resources :questions
+
   resources :books do
     resources :pages
   end
