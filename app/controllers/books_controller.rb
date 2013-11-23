@@ -16,7 +16,6 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    binding.pry
     if @book.save
       redirect_to @book
     end
