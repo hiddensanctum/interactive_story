@@ -1,7 +1,7 @@
 <div class="well text-center">
   <% @pages.each do |page| %>
     <%= image_tag page.image_url.to_s %>
-    <p><h2><%= page.story %></h2></p>
+    <p><h3><%= page.story %></h3></p>
     <% page.questions.each do |question| %>
       <p><%= question.name %></p>
       <% question.answers.each do |answer| %>
