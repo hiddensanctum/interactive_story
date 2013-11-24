@@ -11,10 +11,6 @@ class PagesController < ApplicationController
 
   def new
     @page = @book.pages.new
-    1.times do
-      question = @page.questions.build
-      1.times { question.answers.build }
-    end
   end
 
   def edit
@@ -25,7 +21,7 @@ class PagesController < ApplicationController
     @page = @book.pages.new(page_params)
 
     if @page.save
-      redirect_to [@book, @page]
+      redirect_to book_pages_path
     end
   end
 
