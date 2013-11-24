@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -36,6 +37,10 @@ gem 'will_paginate'
 gem 'carrierwave'
 
 gem 'rmagick'
+
+group :developemnt, :test do
+  gem 'sqlite3'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
