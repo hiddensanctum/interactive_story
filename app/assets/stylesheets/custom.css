@@ -1,0 +1,19 @@
+.navbar-default {
+  text-align: center;
+}
+
+body {
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #818181;
+  padding-top: 40px;
+}
+
+.navbar-fixed-top {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  -webkit-box-shadow: 0 4px 6px -6px #818181;
+  -moz-box-shadow: 0 4px 6px -6px #818181;
+  box-shadow: 0 4px 6px -6px #818181;
+  opacity: 0.9;
+}
