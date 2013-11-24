@@ -1,9 +1,14 @@
 <div class="box">
 
-  <%= link_to (image_tag book.image_url.to_s), book_pages_path(book) %>
+  <h3 id="book-name">book.name</h3>
+
+  <p id="book-description">book.description<p>
+
+  <%= link_to (image_tag book.image_url.to_s), book_pages_path(book), id: "box-image" %>
   <%= link_to "Play", book_pages_path(book), class: "square btn-primary", style: "float:left" %>
-  <%= link_to "Info", book_pages_path(book), class: "square btn-info", style: "float:right" %>
+  <%= link_to "Info", '#', class: "square btn-info", style: "float:right" %>
+
+
 
 
 </div>
-

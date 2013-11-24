@@ -3,6 +3,10 @@ class PagesController < ApplicationController
 
   def index
     @pages = @book.pages.paginate(:page => params[:page], :per_page => 1)
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def show
