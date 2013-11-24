@@ -35,9 +35,12 @@ class PagesController < ApplicationController
   def destroy
   end
 
+  def eval
+  end
+
   private
     def page_params
-      params.require(:page).permit(:image, :story, questions_attributes: [:id, :page_id, :name, '_destroy', answers_attributes: [:id, :question_id, :name, :correct, '_destroy' ] ])
+      params.require(:page).permit(:image, :story, questions_attributes: [:id, :page_id, :name, '_destroy', answers_attributes: [:id, :question_id, :image, :name, :correct, '_destroy' ] ])
     end
 
     def load_book

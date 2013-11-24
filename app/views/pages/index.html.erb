@@ -1,12 +1,22 @@
 <div class="well text-center">
   <% @pages.each do |page| %>
-    <%= image_tag page.image_url(:thumb).to_s %>
-    <p><h2><%= page.story %></h2></p>
+    <%= image_tag page.image_url.to_s, class: "img-responsive"%>
+    <p><h3><%= page.story %></h3></p>
     <% page.questions.each do |question| %>
-      <p><%= question.name %></p>
+      <p><h2><%= question.name %></h2></p>
+      <div class='row'>
       <% question.answers.each do |answer| %>
-        <p><%= answer.name %></p>
+          <div class='col-lg-2 text-center'>
+            <% if answer.correct %>
+              <%= image_tag "#{answer.question.id.to_s}_#{answer.id.to_s}.png", class: "img-responsive", id: 'right'%>
+            <% else %>
+              <%= image_tag "#{answer.question.id.to_s}_#{answer.id.to_s}.png", class: "img-responsive", id: 'wrong_' + answer.id.to_s%>
+            <% end %>
+          </div>
+
+
       <% end %>
+      </div>
     <% end %>
 
   <% end %>
