@@ -20,6 +20,12 @@
     <%= f.label :story %><br />
     <%= f.text_field :story %>
   </div>
+
+<%= f.fields_for :questions do |builder| %>
+  <%= render 'question_fields', f: builder %>
+<% end %>
+<%= link_to_add_fields "Add Question", f, :questions %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

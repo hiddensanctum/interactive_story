@@ -11,6 +11,10 @@ class PagesController < ApplicationController
 
   def new
     @page = @book.pages.new
+    1.times do
+      question = @page.questions.build
+      3.times { question.answers.build }
+    end
   end
 
   def edit
@@ -19,6 +23,7 @@ class PagesController < ApplicationController
 
   def create
     @page = @book.pages.new(page_params)
+    binding.pry
 
     if @page.save
       redirect_to [@book, @page]
@@ -33,7 +38,7 @@ class PagesController < ApplicationController
 
   private
     def page_params
-      params.require(:page).permit(:image, :story)
+      params.require(:page).permit(:image, :story, questions_attributes: [:id, :page_id, :name, '_destroy', answers_attributes: [:id, :question_id, :name, :correct, '_destroy' ] ])
     end
 
     def load_book
