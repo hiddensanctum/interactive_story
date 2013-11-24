@@ -8,9 +8,9 @@
       <% question.answers.each do |answer| %>
           <div class='col-lg-2 text-center'>
             <% if answer.correct %>
-              <%= image_tag "#{answer.question.id.to_s}_#{answer.id.to_s}.png", class: "img-responsive", id: 'right'%>
+              <%= image_tag "#{answer.question.id.to_s}_#{answer.id.to_s}.png", class: "img-responsive", onclick: "rightAnswer()"%>
             <% else %>
-              <%= image_tag "#{answer.question.id.to_s}_#{answer.id.to_s}.png", class: "img-responsive", id: 'wrong_' + answer.id.to_s%>
+              <%= image_tag "#{answer.question.id.to_s}_#{answer.id.to_s}.png", class: "img-responsive", onclick: "wrongAnswer()" %>
             <% end %>
           </div>
 
