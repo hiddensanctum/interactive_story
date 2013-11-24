@@ -5,8 +5,14 @@
 body {
   padding-right: 20px;
   padding-left: 20px;
-  background-color: #818181;
+  background: url(/../assets/paperair.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   padding-top: 40px;
+
+
 }
 
 .navbar-fixed-top {
@@ -16,6 +22,6 @@ body {
   -moz-box-shadow: 0 4px 6px -6px #818181;
   box-shadow: 0 4px 6px -6px #818181;
   opacity: 0.9;
+  color: #000000;
 }
-
 
