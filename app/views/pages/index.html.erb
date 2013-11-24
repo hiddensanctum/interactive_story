@@ -3,7 +3,10 @@
     <%= image_tag page.image_url(:thumb).to_s %>
     <p><h2><%= page.story %></h2></p>
     <% page.questions.each do |question| %>
-      <%= question.name %>
+      <p><%= question.name %></p>
+      <% question.answers.each do |answer| %>
+        <p><%= answer.name %></p>
+      <% end %>
     <% end %>
 
   <% end %>
