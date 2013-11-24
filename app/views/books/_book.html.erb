@@ -1,4 +1,10 @@
 <div class="box">
+
   <%= link_to (image_tag book.image_url.to_s), book %>
+
+  <div class="row-fluid">
+    <%= link_to "Play", book_pages_path(book), class: "btn btn-primary", style: "float:left" %>
+    <%= link_to "Info", book_pages_path(book), class: "btn btn-info", style: "float:right" %>
+  <div>
 </div>
 
