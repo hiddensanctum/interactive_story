@@ -1,3 +1,21 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.box {
+        margin: 5px;
+        padding: 5px;
+        font-size: 11px;
+        line-height: 1.4em;
+        float: left;
+        box-shadow: 1px 1px 1px #444;
+        -webkit-box-shadow: 1px 1px 1px #444;
+        -moz-box-shadow: 1px 1px 1px #444;
+        width: 200px;
+        height: 280px;
+}
+
+.box img {
+        diplay: block;
+        width: 100%;
+}
