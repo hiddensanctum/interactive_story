@@ -13,7 +13,7 @@ class PagesController < ApplicationController
     @page = @book.pages.new
     1.times do
       question = @page.questions.build
-      3.times { question.answers.build }
+      1.times { question.answers.build }
     end
   end
 
