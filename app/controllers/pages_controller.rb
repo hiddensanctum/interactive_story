@@ -23,7 +23,6 @@ class PagesController < ApplicationController
 
   def create
     @page = @book.pages.new(page_params)
-    binding.pry
 
     if @page.save
       redirect_to [@book, @page]
