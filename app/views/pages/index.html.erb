@@ -1,5 +1,8 @@
 <% @pages.each do |page| %>
-  <%= page.story%>
+  <%= page.story %>
+  <% page.questions.each do |question| %>
+    <%= question.name %>
+  <% end %>
   <%= image_tag page.image_url(:thumb).to_s %><br>
 <% end %>
 
