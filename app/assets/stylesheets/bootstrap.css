@@ -4516,8 +4516,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar {
   position: relative;
-  min-height: 60px;
-  margin-bottom: 21px;
+  min-height: 40px;
+  padding-top: 5px;
+  margin-bottom: 25px;
   border: 1px solid transparent;
 }
 
