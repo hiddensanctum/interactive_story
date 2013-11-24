@@ -3,17 +3,19 @@
     <%= image_tag page.image_url.to_s, class: "img-responsive"%>
     <p><h3><%= page.story %></h3></p>
     <% page.questions.each do |question| %>
-      <p><%= question.name %></p>
+      <p><h2><%= question.name %></h2></p>
       <div class='row'>
       <% question.answers.each do |answer| %>
 
-          <div class='col-lg-1 text-center'>
+          <div class='col-lg-2 text-center'>
             <% if answer.correct %>
-              <%= image_tag "#{answer.question.id.to_s}_#{answer.id.to_s}.gif", class: "img-responsive", id: 'right'%>
+              <%= image_tag "#{answer.question.id.to_s}_#{answer.id.to_s}.png", class: "img-responsive", id: 'right'%>
             <% else %>
-              <%= image_tag "#{answer.question.id.to_s}_#{answer.id.to_s}.gif", class: "img-responsive", id: 'wrong'%>
+              <%= image_tag "#{answer.question.id.to_s}_#{answer.id.to_s}.png", class: "img-responsive", id: 'wrong'%>
             <% end %>
-            <%= answer.name %>
+
+
+
           </div>
 
 
