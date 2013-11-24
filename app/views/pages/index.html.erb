@@ -1,12 +1,24 @@
 <div class="well text-center">
   <% @pages.each do |page| %>
-    <%= image_tag page.image_url.to_s, class: "img-responsive img-center"%>
+    <%= image_tag page.image_url.to_s, class: "img-responsive"%>
     <p><h3><%= page.story %></h3></p>
     <% page.questions.each do |question| %>
       <p><%= question.name %></p>
+      <div class='row'>
       <% question.answers.each do |answer| %>
-        <p><%= answer.name %></p>
+
+          <div class='col-lg-1 text-center'>
+            <% if answer.correct %>
+              <%= image_tag "#{answer.question.id.to_s}_#{answer.id.to_s}.gif", class: "img-responsive", id: 'right'%>
+            <% else %>
+              <%= image_tag "#{answer.question.id.to_s}_#{answer.id.to_s}.gif", class: "img-responsive", id: 'wrong'%>
+            <% end %>
+            <%= answer.name %>
+          </div>
+
+
       <% end %>
+      </div>
     <% end %>
 
   <% end %>
