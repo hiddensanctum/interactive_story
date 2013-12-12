@@ -1,7 +1,6 @@
 var ready;
 ready = function () {
   $(document).bind('keydown', 'right', function() {
-    console.log('hi')
     $(".next_page").click();
   });
 
