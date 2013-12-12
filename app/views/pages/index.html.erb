@@ -2,6 +2,7 @@
   <% @pages.each do |page| %>
     <%= image_tag page.image_url.to_s, class: "img-responsive"%>
     <p><h3><%= page.story %></h3></p>
+    <%= audio_tag("https://s3-us-west-2.amazonaws.com/little-programmers/audios/"+ page.book.id.to_s + "-" + page.id.to_s + ".mp3", autoplay: true, controls: false) %>
     <% page.questions.each do |question| %>
       <p><h2><%= question.name %></h2></p>
       <div class='row'>
@@ -20,4 +21,5 @@
       <h3><%= will_paginate @pages %></h3><br>
     <% end %>
   <% end %>
+  <%= link_to 'Back To The Menu', books_path %>
 </div>

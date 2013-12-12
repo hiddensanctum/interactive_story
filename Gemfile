@@ -41,8 +41,12 @@ gem 'carrierwave'
 
 gem 'rmagick'
 
+gem 'fog'
+
+gem 'unf'
+
 group :developemnt, :test do
-  #gem 'sqlite3'
+  gem 'sqlite3'
 end
 
 group :doc do
