@@ -19,7 +19,6 @@ class PagesController < ApplicationController
 
   def edit
     @page = @book.pages.find(params[:id])
-    @page.save
   end
 
   def create

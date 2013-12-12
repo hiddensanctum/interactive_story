@@ -1,5 +1,6 @@
 var ready;
 ready = function () {
+
   $(document).bind('keydown',function(e){
     key  = e.keyCode;
     if(key == 39){
@@ -10,6 +11,7 @@ ready = function () {
       return false;
     }
   });
+
 }
 function rightAnswer(){
   alert('Correct!');
@@ -24,3 +26,4 @@ function wrongAnswer(){
 
  $(document).ready(ready)
  $(document).on('page:load', ready)
+ console.log("something");
