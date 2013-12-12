@@ -31,7 +31,7 @@ class PagesController < ApplicationController
 
   def update
     @page = @book.pages.find(params[:id])
-    if @page.update_attribute(page_params)
+    if @page.update_attributes(page_params)
       redirect_to book_pages_path
     end
   end
