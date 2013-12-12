@@ -3,5 +3,4 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 jQuery ->
-  $('#books').imagesLoaded ->
-      $('#books').masonry itemSelector: ".box"
+  $('#books').masonry itemSelector: ".box"
