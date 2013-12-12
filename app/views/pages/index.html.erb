@@ -1,4 +1,4 @@
-<div class="well text-center">
+<div class="well text-center fadeFast">
   <% @pages.each do |page| %>
     <%= image_tag page.image_url.to_s, class: "img-responsive"%>
     <p><h3><%= page.story %></h3></p>
@@ -13,8 +13,6 @@
               <%= image_tag "#{answer.question.id.to_s}_#{answer.id.to_s}.png", class: "img-responsive", onclick: "wrongAnswer()" %>
             <% end %>
           </div>
-
-
       <% end %>
       </div>
     <% end %>
