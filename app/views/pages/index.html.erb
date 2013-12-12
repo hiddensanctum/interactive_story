@@ -16,10 +16,8 @@
       <% end %>
       </div>
     <% end %>
-
+    <% if page.questions.length == 0 %>
+      <h3><%= will_paginate @pages %></h3><br>
+    <% end %>
   <% end %>
-
-  <h3><%= will_paginate @pages %></h3><br>
-
-
 </div>

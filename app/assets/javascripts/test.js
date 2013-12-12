@@ -1,11 +1,14 @@
 var ready;
 ready = function () {
-  $(document).bind('keydown', 'right', function() {
-    $(".next_page").click();
-  });
-
-  $(document).bind('keydown', 'left', function() {
-    $(".previous_page").click();
+  $(document).bind('keydown',function(e){
+    key  = e.keyCode;
+    if(key == 39){
+      document.location.href = $("a.next_page")[0].href;
+      return false;
+    }else if(key == 37){
+      document.location.href = $("a.previous_page")[0].href;
+      return false;
+    }
   });
 }
 function rightAnswer(){
